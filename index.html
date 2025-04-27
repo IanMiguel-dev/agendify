@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendify - Sistema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+    <header>
+        <h1>Agenda de Atendimentos</h1>
+        <button id="logoutBtn">Sair</button>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Agendar Atendimento</h2>
+            <form id="scheduleForm">
+                <input type="text" id="clientName" placeholder="Nome do Cliente" required>
+                <input type="tel" id="clientPhone" placeholder="Telefone" required>
+                <input type="email" id="clientEmail" placeholder="E-mail" required>
+                <input type="text" id="clientAddress" placeholder="Endereço" required>
+                <input type="datetime-local" id="appointmentDateTime" required>
+                <textarea id="observations" placeholder="Observações (opcional)"></textarea>
+                <button type="submit">Agendar</button>
+            </form>
+        </section>
+
+        <section class="appointments-section">
+            <h2>Agendamentos</h2>
+            <input type="text" id="search" placeholder="Buscar agendamentos...">
+            <table id="appointmentsTable">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th>Endereço</th>
+                        <th>Data e Hora</th>
+                        <th>Observações</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Agendamentos vão aparecer aqui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
